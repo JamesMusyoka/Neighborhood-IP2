@@ -14,6 +14,15 @@ class Neighborhood(models.Model):
     def __str__(self):
         return self.neighborhood_name
 
+    def save_neighborhood(self):
+        self.save()
+
+    def create_neighborhood(self):
+        self.save
+
+    def find_neighborhood(self):
+        self.save
+
     class Meta:
         ordering = ['neighborhood_name']
 
