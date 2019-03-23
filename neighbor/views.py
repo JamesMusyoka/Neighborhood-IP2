@@ -10,7 +10,7 @@ def home(request):
 
 def neighborhood(request):
     date = dt.date.today()
-    return render(request, 'neighbor.html', {"date": date})
+    return render(request, 'neighborhood.html', {"date": date})
 
 def convert_dates(dates):
 
