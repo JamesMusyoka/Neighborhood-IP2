@@ -23,6 +23,15 @@ class Neighborhood(models.Model):
     def find_neighborhood(self):
         self.save
 
+    def update_neighborhood(self):
+        self.save
+
+    def update_occupands(self):
+        self.save
+
+    def delete_neighborhood(self):
+        self.save
+
     class Meta:
         ordering = ['neighborhood_name']
 
@@ -42,4 +51,11 @@ class Business(models.Model):
     neighborhood_id = models.ForeignKey(Neighborhood,null=True,blank=True)
     business_email = models.EmailField()
     phone_number = models.CharField(max_length = 10,blank=True)
+
+
+    def save_business(self):
+        self.save()
+
+    # def  create_business(self):
+    #     self.save
 
