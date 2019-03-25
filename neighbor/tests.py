@@ -54,7 +54,7 @@ class BusinessTestClasss(TestCase):
         business = Business.objects.all()
         self.assertTrue(len(business) > 0)
 
-    # def test_create_business(self):
-    #     self.newgeneration.create_neighborhood()
-    #     business = Business.objects.all()
-    #     self.assertTrue(len(business) == 1)
+    def test_create_business(self):
+        self.newgeneration.create_business()
+        business = Business.objects.all()
+        self.assertFalse(len(business) == 1)
