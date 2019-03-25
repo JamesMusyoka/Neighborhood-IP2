@@ -58,3 +58,8 @@ class BusinessTestClasss(TestCase):
         self.newgeneration.create_business()
         business = Business.objects.all()
         self.assertFalse(len(business) == 1)
+
+    def test_delete_business(self):
+        self.newgeneration.delete_business()
+        business = Business.objects.all()
+        self.assertTrue(len(business) == 0)
